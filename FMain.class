@@ -1,0 +1,25 @@
+' Gambas class file
+
+Const AC As Integer = 60
+
+Public Sub Form_Open()
+
+  Shell "gpio mode 7 output"
+  Shell "gpio mode 0 output"
+  Print "start gpio"
+
+End
+
+Public Sub Button1_Click()
+  Shell "killall sound;sleep 0.1"
+  Shell "sh -c 'alternator " & Str(AC) & " 59' &"
+  Print "sh -c 'alternator " & Str(AC) & " 59' &"
+End
+
+Public Sub Button2_Click()
+  Shell "killall alternator;sleep 0.1"
+  Shell "gpio write 7 0"
+  Shell "gpio write 0 0"
+  Print "fun off"
+
+End

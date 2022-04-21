@@ -1,0 +1,15 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,50,50)
+  Background = &HBFBFBF&
+  Text = ("relay")
+  { Button1 Button
+    MoveScaled(3,2,20,5)
+    Text = ("relay on")
+  }
+  { Button2 Button
+    MoveScaled(4,10,19,5)
+    Text = ("relay off")
+  }
+}
